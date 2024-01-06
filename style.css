@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root{
+:root {
   --text--color: white;
   --bg--url: url(./assets/bg-mobile.jpg);
   --stroke--color: rgba(255, 255, 255, 0.5);
@@ -13,7 +13,7 @@
   --switch--bg--url: url(./assets/moon-stars.svg);
   --border--img: 0%;
 }
-.light{
+.light {
   --text--color: black;
   --bg--url: url(./assets/bg-mobile-light.jpg);
   --stroke--color: rgba(0, 0, 0, 0.5);
@@ -32,6 +32,7 @@ body {
   background: color image repeat position/size
   */
   background: var(--bg--url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -66,10 +67,10 @@ body * {
   width: 64px;
   margin: 4px auto;
 }
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
-  background:white var(--switch--bg--url) no-repeat center;
+  background: white var(--switch--bg--url) no-repeat center;
   border: 0;
   border-radius: 50%;
   position: absolute;
@@ -78,11 +79,11 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
 }
-.light #switch button{
+.light #switch button {
   right: 0;
   left: initial;
 }
-#switch span{
+#switch span {
   display: block;
   width: 64px;
   height: 24px;
@@ -114,13 +115,13 @@ ul li a:hover {
   background: var(--surface--color--hover);
   border: 1.5px solid var(--text--color);
 }
-#social-links{
+#social-links {
   display: flex;
   justify-content: center;
   padding: 24px 0;
   font-size: 24px;
 }
-#social-links a{
+#social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,11 +129,19 @@ ul li a:hover {
   transition: background 0.2s;
   border-radius: 50%;
 }
-#social-links a:hover{
+#social-links a:hover {
   background: var(--highlight-color);
 }
-footer{
+footer {
   font-size: 14px;
   padding: 24px 0;
   text-align: center;
+}
+@media (min-width: 700px) {
+  :root {
+    --bg--url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg--url: url(./assets/bg-desktop-light.jpg);
+  }
 }
